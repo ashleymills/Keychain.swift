@@ -5,23 +5,23 @@ A simple drop in Swift wrapper class for the keychain
 
 Just drop the **Keychain.swift** file into your project. That's it!
 
-## Example
+## Example usage
 
 ### Set a key/value pair
 
-Keychain.set("some value", forKey: "my key")
+`Keychain.set("some value", forKey: "my key")`
 
 ### Retrieve the value for a key
 
-Keychain.value(forKey: "my key")
+`Keychain.value(forKey: "my key")`
 
 ### Delete a key/value pair
 
-Keychain.removeValue(forKey: "my key")
+`Keychain.removeValue(forKey: "my key")`
 
 ### Delete all values from the keychain
 
-Keychain.reset()
+`Keychain.reset()`
 
 ## Want to help?
 
