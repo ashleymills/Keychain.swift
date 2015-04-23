@@ -10,10 +10,12 @@ Just drop the **Keychain.swift** file into your project. That's it!
 ### Set a key/value pair
 
 `Keychain.set("some value", forKey: "my key")`
+`Keychain.set(true/false, forKey: "my key")`
 
 ### Retrieve the value for a key
 
 `Keychain.value(forKey: "my key")`
+`Keychain.bool(forKey: "my key")`
 
 ### Delete a key/value pair
 
