@@ -19,12 +19,21 @@ class Keychain {
         }
     }
     
+    class func set(bool:Bool, forKey key:String) -> Bool {
+        let value = bool ? "true" : "false"
+        return set(value, forKey: key)
+    }
+    
     class func value(forKey key: String) -> String? {
         if let valueData = valueData(forKey: key) {
             return NSString(data: valueData, encoding: NSUTF8StringEncoding) as? String
         }
         
         return nil
+    }
+    
+    class func bool(forKey key: String) -> Bool {
+        return value(forKey: key) == "true"
     }
     
     class func removeValue(forKey key:String) -> Bool {
