@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Keychain sample app.xcodeproj">
+      location = "self:/Users/douglas/workspace/random/Keychain.swift/Sample.xcodeproj">
    </FileRef>
 </Workspace>

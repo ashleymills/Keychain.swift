@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5B1D3321B25787900E6CD6F /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1D3311B25787900E6CD6F /* Keychain.swift */; };
 		CAE161271AE124F500771A43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE161251AE124F500771A43 /* Main.storyboard */; };
 		CAE161291AE124F500771A43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE161281AE124F500771A43 /* Images.xcassets */; };
 		CAE1612C1AE124F500771A43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE1612A1AE124F500771A43 /* LaunchScreen.xib */; };
 		CAE161441AE1252D00771A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE161421AE1252D00771A43 /* AppDelegate.swift */; };
 		CAE161451AE1252D00771A43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE161431AE1252D00771A43 /* ViewController.swift */; };
-		CAE1614B1AE1370700771A43 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1614A1AE1370700771A43 /* Keychain.swift */; };
 		CAE161551AE1813700771A43 /* Keychain_swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE161541AE1813700771A43 /* Keychain_swift_Tests.swift */; };
-		CAE1615B1AE1A18100771A43 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1614A1AE1370700771A43 /* Keychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +27,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CAE1611C1AE124F500771A43 /* Keychain sample app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain sample app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B1D3311B25787900E6CD6F /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = ../../Keychain.swift; sourceTree = "<group>"; };
+		CAE1611C1AE124F500771A43 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE161201AE124F500771A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAE161261AE124F500771A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAE161281AE124F500771A43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAE1612B1AE124F500771A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CAE161421AE1252D00771A43 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAE161431AE1252D00771A43 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CAE1614A1AE1370700771A43 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = SOURCE_ROOT; };
 		CAE161501AE1813700771A43 /* Keychain.swift Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Keychain.swift Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE161531AE1813700771A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAE161541AE1813700771A43 /* Keychain_swift_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain_swift_Tests.swift; sourceTree = "<group>"; };
@@ -62,8 +61,8 @@
 		CAE161131AE124F500771A43 = {
 			isa = PBXGroup;
 			children = (
-				CAE1611E1AE124F500771A43 /* Keychain sample app */,
-				CAE161511AE1813700771A43 /* Keychain.swift Tests */,
+				CAE1611E1AE124F500771A43 /* Sample */,
+				CAE161511AE1813700771A43 /* SampleTests */,
 				CAE1611D1AE124F500771A43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,22 +70,23 @@
 		CAE1611D1AE124F500771A43 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAE1611C1AE124F500771A43 /* Keychain sample app.app */,
+				CAE1611C1AE124F500771A43 /* Sample.app */,
 				CAE161501AE1813700771A43 /* Keychain.swift Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CAE1611E1AE124F500771A43 /* Keychain sample app */ = {
+		CAE1611E1AE124F500771A43 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				A5B1D3311B25787900E6CD6F /* Keychain.swift */,
 				CAE161411AE1252D00771A43 /* Classes */,
 				CAE161251AE124F500771A43 /* Main.storyboard */,
 				CAE161281AE124F500771A43 /* Images.xcassets */,
 				CAE1612A1AE124F500771A43 /* LaunchScreen.xib */,
 				CAE1611F1AE124F500771A43 /* Supporting Files */,
 			);
-			path = "Keychain sample app";
+			path = Sample;
 			sourceTree = "<group>";
 		};
 		CAE1611F1AE124F500771A43 /* Supporting Files */ = {
@@ -94,7 +94,7 @@
 			children = (
 				CAE161201AE124F500771A43 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CAE161411AE1252D00771A43 /* Classes */ = {
@@ -102,18 +102,17 @@
 			children = (
 				CAE161421AE1252D00771A43 /* AppDelegate.swift */,
 				CAE161431AE1252D00771A43 /* ViewController.swift */,
-				CAE1614A1AE1370700771A43 /* Keychain.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		CAE161511AE1813700771A43 /* Keychain.swift Tests */ = {
+		CAE161511AE1813700771A43 /* SampleTests */ = {
 			isa = PBXGroup;
 			children = (
 				CAE161541AE1813700771A43 /* Keychain_swift_Tests.swift */,
 				CAE161521AE1813700771A43 /* Supporting Files */,
 			);
-			path = "Keychain.swift Tests";
+			path = SampleTests;
 			sourceTree = "<group>";
 		};
 		CAE161521AE1813700771A43 /* Supporting Files */ = {
@@ -121,15 +120,15 @@
 			children = (
 				CAE161531AE1813700771A43 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CAE1611B1AE124F500771A43 /* Keychain sample app */ = {
+		CAE1611B1AE124F500771A43 /* Sample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAE1613B1AE124F500771A43 /* Build configuration list for PBXNativeTarget "Keychain sample app" */;
+			buildConfigurationList = CAE1613B1AE124F500771A43 /* Build configuration list for PBXNativeTarget "Sample" */;
 			buildPhases = (
 				CAE161181AE124F500771A43 /* Sources */,
 				CAE161191AE124F500771A43 /* Frameworks */,
@@ -139,9 +138,9 @@
 			);
 			dependencies = (
 			);
-			name = "Keychain sample app";
+			name = Sample;
 			productName = "Keychain sample app";
-			productReference = CAE1611C1AE124F500771A43 /* Keychain sample app.app */;
+			productReference = CAE1611C1AE124F500771A43 /* Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CAE1614F1AE1813700771A43 /* Keychain.swift Tests */ = {
@@ -179,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CAE161171AE124F500771A43 /* Build configuration list for PBXProject "Keychain sample app" */;
+			buildConfigurationList = CAE161171AE124F500771A43 /* Build configuration list for PBXProject "Sample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -192,7 +191,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CAE1611B1AE124F500771A43 /* Keychain sample app */,
+				CAE1611B1AE124F500771A43 /* Sample */,
 				CAE1614F1AE1813700771A43 /* Keychain.swift Tests */,
 			);
 		};
@@ -224,8 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE161451AE1252D00771A43 /* ViewController.swift in Sources */,
+				A5B1D3321B25787900E6CD6F /* Keychain.swift in Sources */,
 				CAE161441AE1252D00771A43 /* AppDelegate.swift in Sources */,
-				CAE1614B1AE1370700771A43 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +233,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE161551AE1813700771A43 /* Keychain_swift_Tests.swift in Sources */,
-				CAE1615B1AE1A18100771A43 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +241,7 @@
 /* Begin PBXTargetDependency section */
 		CAE1615A1AE19FF100771A43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CAE1611B1AE124F500771A43 /* Keychain sample app */;
+			target = CAE1611B1AE124F500771A43 /* Sample */;
 			targetProxy = CAE161591AE19FF100771A43 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -255,6 +253,7 @@
 				CAE161261AE124F500771A43 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CAE1612A1AE124F500771A43 /* LaunchScreen.xib */ = {
@@ -263,6 +262,7 @@
 				CAE1612B1AE124F500771A43 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -353,9 +353,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Keychain sample app/Info.plist";
+				INFOPLIST_FILE = "Sample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sample;
 			};
 			name = Debug;
 		};
@@ -363,9 +363,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Keychain sample app/Info.plist";
+				INFOPLIST_FILE = "Sample/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sample;
 			};
 			name = Release;
 		};
@@ -380,7 +380,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Keychain.swift Tests/Info.plist";
+				INFOPLIST_FILE = "SampleTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -393,7 +393,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Keychain.swift Tests/Info.plist";
+				INFOPLIST_FILE = "SampleTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -402,7 +402,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CAE161171AE124F500771A43 /* Build configuration list for PBXProject "Keychain sample app" */ = {
+		CAE161171AE124F500771A43 /* Build configuration list for PBXProject "Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE161391AE124F500771A43 /* Debug */,
@@ -411,7 +411,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAE1613B1AE124F500771A43 /* Build configuration list for PBXNativeTarget "Keychain sample app" */ = {
+		CAE1613B1AE124F500771A43 /* Build configuration list for PBXNativeTarget "Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE1613C1AE124F500771A43 /* Debug */,
@@ -427,6 +427,7 @@
 				CAE161571AE1813700771A43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
