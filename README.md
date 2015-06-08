@@ -1,24 +1,8 @@
 #Keychain.swift
 A simple drop in Swift wrapper class for the keychain
 
-###Setup and Installation
-You can just drop the `Keychain.swift` file into your project, or use something more robust like Carthage.
-
-#####Installing with Carthage
-Carthage is a decentralised dependency manager that automates the process of adding frameworks to your Cocoa application.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate Keychain into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "ashleymills/Keychain.swift" "master"
-```
+##Setup
+You can just drop the `Keychain.swift` file into your project! That's it.
 
 ##Example usage
 ####Set a key/value pair
