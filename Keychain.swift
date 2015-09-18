@@ -63,7 +63,7 @@ class Keychain {
     
     private class func update(value: String, forKey key: String) -> Bool {
         
-        var searchDictionary = newSearchDictionary(forKey: key)
+        let searchDictionary = newSearchDictionary(forKey: key)
         var updateDictionary = [String: AnyObject]()
         
         updateDictionary[kSecValueData as String] = value.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
@@ -74,7 +74,7 @@ class Keychain {
     }
     
     private class func deleteValue(forKey key: String) -> Bool {
-        var searchDictionary = newSearchDictionary(forKey: key)
+        let searchDictionary = newSearchDictionary(forKey: key)
         let status = SecItemDelete(searchDictionary)
         
         return status == errSecSuccess
@@ -87,13 +87,12 @@ class Keychain {
         searchDictionary[kSecMatchLimit as String] = kSecMatchLimitOne
         searchDictionary[kSecReturnData as String] = kCFBooleanTrue
         
-        var dataTypeRef: Unmanaged<AnyObject>?
-
-        let status = SecItemCopyMatching(searchDictionary as CFDictionaryRef, &dataTypeRef)
+        var retrievedData: AnyObject?
+        let status = SecItemCopyMatching(searchDictionary as CFDictionaryRef, &retrievedData)
         
         var data: NSData?
         if status == errSecSuccess {
-            data = dataTypeRef!.takeRetainedValue() as? NSData
+            data = retrievedData as? NSData
         }
         
         return data
@@ -111,7 +110,7 @@ class Keychain {
     
     private class func basicDictionary() -> [String: AnyObject] {
         
-        let serviceName = NSBundle(forClass: self).infoDictionary![kCFBundleIdentifierKey] as! String
+        let serviceName = NSBundle(forClass: self).infoDictionary![kCFBundleIdentifierKey as String] as! String
         
         return [kSecClass as String : kSecClassGenericPassword, kSecAttrService as String : serviceName]
     }
