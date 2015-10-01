@@ -20,15 +20,15 @@ class ViewController: UIViewController {
 
 
     @IBAction private func addToKeychain(sender: AnyObject) {
-        Keychain.set(addValue.text, forKey: addKey.text)
+        Keychain.set(addValue.text!, forKey: addKey.text!)
     }
 
     @IBAction private func fetchFromKeychain(sender: AnyObject) {
-        fetchValue.text = Keychain.value(forKey: fetchKey.text) ?? "Not found"
+        fetchValue.text = Keychain.value(forKey: fetchKey.text!) ?? "Not found"
         
     }
     @IBAction private func deleteFromKeychain(sender: AnyObject) {
-        Keychain.removeValue(forKey: deleteKey.text)
+        Keychain.removeValue(forKey: deleteKey.text!)
     }
     @IBAction private func resetKeychain(sender: AnyObject) {
         Keychain.reset()
