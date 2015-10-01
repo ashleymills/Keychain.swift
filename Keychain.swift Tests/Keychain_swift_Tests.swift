@@ -72,4 +72,18 @@ class Keychain_swift_Tests: XCTestCase {
         value = Keychain.value(forKey: "key2")
         XCTAssertEqual(value!, "value2", "Keychain.value should return the correct value for non removed keys")
     }
+
+    func testReset() {
+        Keychain.set("value1", forKey: "key1")
+        Keychain.set("value2", forKey: "key2")
+        
+        let success = Keychain.reset()
+        XCTAssertTrue(success, "Keychain.reset should return true")
+        
+        var value = Keychain.value(forKey: "key1")
+        XCTAssertTrue(value == nil, "Keychain.value should return nil after reset")
+        
+        value = Keychain.value(forKey: "key2")
+        XCTAssertTrue(value == nil, "Keychain.value should return nil after reset")
+    }
 }
