@@ -25,11 +25,9 @@ class Keychain {
     }
     
     class func value(forKey key: String) -> String? {
-        if let valueData = valueData(forKey: key) {
-            return NSString(data: valueData, encoding: NSUTF8StringEncoding) as? String
-        }
+        guard let valueData = valueData(forKey: key) else { return nil }
         
-        return nil
+        return NSString(data: valueData, encoding: NSUTF8StringEncoding) as? String
     }
     
     class func bool(forKey key: String) -> Bool {
@@ -96,6 +94,41 @@ class Keychain {
         }
         
         return data
+    }
+    
+    class func allValues() -> [[String: String]]?  {
+        
+        var searchDictionary = basicDictionary()
+        
+        searchDictionary[kSecMatchLimit as String] = kSecMatchLimitAll
+        searchDictionary[kSecReturnAttributes as String] = kCFBooleanTrue
+        searchDictionary[kSecReturnData as String] = kCFBooleanTrue
+        
+        var retrievedAttributes: AnyObject?
+        var retrievedData: AnyObject?
+        
+        var status = SecItemCopyMatching(searchDictionary as CFDictionaryRef, &retrievedAttributes)
+        if status != errSecSuccess {
+            return nil
+        }
+
+        status = SecItemCopyMatching(searchDictionary as CFDictionaryRef, &retrievedData)
+        if status != errSecSuccess {
+            return nil
+        }
+
+        guard let attributeDicts = retrievedAttributes as? [[String: AnyObject]] else { return nil }
+
+        var allValues = [[String : String]]()
+        for attributeDict in attributeDicts {
+            guard let keyData = attributeDict[kSecAttrAccount as String] as? NSData else { continue }
+            guard let valueData = attributeDict[kSecValueData as String] as? NSData else { continue }
+            guard let key = NSString(data: keyData, encoding: NSUTF8StringEncoding) as? String else { continue }
+            guard let value = NSString(data: valueData, encoding: NSUTF8StringEncoding) as? String else { continue }
+            allValues.append([key: value])
+        }
+        
+        return allValues
     }
     
     private class func newSearchDictionary(forKey key: String) -> [String: AnyObject] {
