@@ -1,9 +1,15 @@
 # Keychain.swift
 A simple drop in Swift wrapper class for the keychain
 
-## Use
+## Installation
 
+### Manual
 Just drop the **Keychain.swift** file into your project. That's it!
+
+### CocoaPods
+**Keychain.swift** is available through CocoaPods. To install it, simply add the following line to your Podfile:
+
+`pod "KeychainSwift"`
 
 ## Example usage
 
