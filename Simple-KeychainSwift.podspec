@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = 'KeychainSwift'
+  s.name         = 'Simple-KeychainSwift'
   s.version      = '1.0'
   s.homepage     = 'https://github.com/ashleymills/Keychain.swift'
   s.authors      = {
@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
     :tag => 'v'+s.version.to_s
   }
   s.source_files = 'Keychain.swift'
-  s.framework    = 'SystemConfiguration'
 
   s.requires_arc = true
 end
