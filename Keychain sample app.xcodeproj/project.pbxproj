@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA43C89A1D12A20A00C3B257 /* Simple-KeychainSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Simple-KeychainSwift.podspec"; sourceTree = "<group>"; };
 		CAE1611C1AE124F500771A43 /* Keychain sample app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keychain sample app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE161201AE124F500771A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAE161261AE124F500771A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		CAE161131AE124F500771A43 = {
 			isa = PBXGroup;
 			children = (
+				CA43C89A1D12A20A00C3B257 /* Simple-KeychainSwift.podspec */,
 				CAE1611E1AE124F500771A43 /* Keychain sample app */,
 				CAE161511AE1813700771A43 /* Keychain.swift Tests */,
 				CAE1611D1AE124F500771A43 /* Products */,
