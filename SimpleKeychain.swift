@@ -1,6 +1,6 @@
 //
 //  KeychainWrapper.swift
-//  Keychain sample app
+//  SimpleKeychain sample app
 //
 //  Created by Ashley Mills on 17/04/2015.
 //  Copyright (c) 2015 Joylord Systems Ltd. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Keychain {
+class SimpleKeychain {
     
     // MARK: - *** Public methods ***
     class func set(value:String, forKey key:String) -> Bool {

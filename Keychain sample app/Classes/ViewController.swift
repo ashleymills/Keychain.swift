@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Keychain sample app
+//  SimpleKeychain sample app
 //
 //  Created by Ashley Mills on 17/04/2015.
 //  Copyright (c) 2015 Joylord Systems Ltd. All rights reserved.
@@ -20,23 +20,23 @@ class ViewController: UIViewController {
 
 
     @IBAction private func addToKeychain(sender: AnyObject) {
-        Keychain.set(addValue.text!, forKey: addKey.text!)
-        print("\(Keychain.allValues())")
+        SimpleKeychain.set(addValue.text!, forKey: addKey.text!)
+        print("\(SimpleKeychain.allValues())")
     }
 
     @IBAction private func fetchFromKeychain(sender: AnyObject) {
-        fetchValue.text = Keychain.value(forKey: fetchKey.text!) ?? "Not found"
-        print("\(Keychain.allValues())")
+        fetchValue.text = SimpleKeychain.value(forKey: fetchKey.text!) ?? "Not found"
+        print("\(SimpleKeychain.allValues())")
     }
 
     @IBAction private func deleteFromKeychain(sender: AnyObject) {
-        Keychain.removeValue(forKey: deleteKey.text!)
-        print("\(Keychain.allValues())")
+        SimpleKeychain.removeValue(forKey: deleteKey.text!)
+        print("\(SimpleKeychain.allValues())")
     }
 
     @IBAction private func resetKeychain(sender: AnyObject) {
-        Keychain.reset()
-        print("\(Keychain.allValues())")
+        SimpleKeychain.reset()
+        print("\(SimpleKeychain.allValues())")
     }
 }
 
