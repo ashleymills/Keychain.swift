@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SimpleKeychain sample app
+//  Keychain sample app
 //
 //  Created by Ashley Mills on 17/04/2015.
 //  Copyright (c) 2015 Joylord Systems Ltd. All rights reserved.

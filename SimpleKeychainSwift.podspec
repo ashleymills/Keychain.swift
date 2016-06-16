@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
-s.name         = "Simple-KeychainSwift"
-s.version      = "1.1"
-s.summary      = "A simple drop in Swift wrapper class for the SimpleKeychain"
+s.name         = "SimpleKeychainSwift"
+s.version      = "1.1.1"
+s.summary      = "A simple drop in Swift wrapper class for the Keychain"
 s.homepage     = "https://github.com/ashleymills/Keychain.swift"
 s.license      = "MIT"
 s.author       = { "Ashley Mills" => "ashleymills@mac.com" }
@@ -12,6 +12,6 @@ s.platform     = :osx, "10.11"
 s.ios.deployment_target = "8.0"
 s.osx.deployment_target = "10.9"
 s.source       = { :git => "https://github.com/ashleymills/Keychain.swift.git", :tag => "v"+s.version.to_s }
-s.source_files = "SimpleKeychain.swift"
+s.source_files = "Keychain.swift"
 
 end
