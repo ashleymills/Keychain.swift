@@ -52,6 +52,16 @@
                ReferencedContainer = "container:Simple-KeychainSwift.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CADBEE5E1D1961A5003CE00F"
+               BuildableName = "Simple-KeychainSwift_ExampleTests.xctest"
+               BlueprintName = "Simple-KeychainSwift_ExampleTests"
+               ReferencedContainer = "container:Simple-KeychainSwift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

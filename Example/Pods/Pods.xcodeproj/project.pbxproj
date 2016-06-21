@@ -14,8 +14,7 @@
 		60117578E1EB38515CDC842939896B0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		6458F66E7EF7318C12C6EA6D18A9634C /* Simple-KeychainSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCF4BEFE05816D818ED96D9319387FF /* Simple-KeychainSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFAF90ECAFBFD779DA05E381C2CA702B /* Pods-Simple-KeychainSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF7557081E0FD69FEE953E2D0CA5B9A0 /* Pods-Simple-KeychainSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CACEAAFA1D194ED300248423 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEAAF91D194ED300248423 /* Keychain.swift */; };
-		CACEAAFB1D194EDD00248423 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEAAF91D194ED300248423 /* Keychain.swift */; };
+		CADBEE5A1D195D49003CE00F /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEAAF91D194ED300248423 /* Keychain.swift */; };
 		CF6064DFAA1F3B6ADC300D13B04C2C88 /* Pods-Simple-KeychainSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3676AC8BC2DFB04CF4944440CB60C /* Pods-Simple-KeychainSwift_Example-dummy.m */; };
 		E8EB5F1F97D810964827C7D9A9439666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -339,7 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6064DFAA1F3B6ADC300D13B04C2C88 /* Pods-Simple-KeychainSwift_Example-dummy.m in Sources */,
-				CACEAAFA1D194ED300248423 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +353,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CACEAAFB1D194EDD00248423 /* Keychain.swift in Sources */,
 				18E21EA30D64974688346086FA697EFA /* Simple-KeychainSwift-dummy.m in Sources */,
+				CADBEE5A1D195D49003CE00F /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

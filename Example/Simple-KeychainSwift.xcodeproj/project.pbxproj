@@ -49,6 +49,8 @@
 		CACEAAEC1D194B9000248423 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CACEAAF31D194C0E00248423 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		CACEAAF61D194C4300248423 /* Keychain_swift_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain_swift_Tests.swift; sourceTree = "<group>"; };
+		CADBEE611D1961A5003CE00F /* Simple_KeychainSwift_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_KeychainSwift_ExampleTests.swift; sourceTree = "<group>"; };
+		CADBEE631D1961A5003CE00F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Simple-KeychainSwift */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				CADBEE601D1961A5003CE00F /* Simple-KeychainSwift_ExampleTests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				2D6F775B1062C26170077149 /* Pods */,
 				0D2068B3FF51241FD2022A99 /* Frameworks */,
@@ -168,6 +171,15 @@
 				CACEAAF31D194C0E00248423 /* Keychain.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		CADBEE601D1961A5003CE00F /* Simple-KeychainSwift_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				CADBEE611D1961A5003CE00F /* Simple_KeychainSwift_ExampleTests.swift */,
+				CADBEE631D1961A5003CE00F /* Info.plist */,
+			);
+			path = "Simple-KeychainSwift_ExampleTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,18 +541,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E77EE962AE8D071286CCD84 /* Pods-Simple-KeychainSwift_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_bundle;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple-KeychainSwift_Example.app/Simple-KeychainSwift_Example";
 			};
 			name = Debug;
 		};
@@ -548,14 +560,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC32CF4B67BD3174C24DA238 /* Pods-Simple-KeychainSwift_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_bundle;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple-KeychainSwift_Example.app/Simple-KeychainSwift_Example";
 			};
 			name = Release;
 		};
