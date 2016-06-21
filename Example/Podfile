@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Simple-KeychainSwift_Example' do
+  pod 'Simple-KeychainSwift', :path => '../'
+
+  target 'Simple-KeychainSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

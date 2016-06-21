@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+@testable import Simple_KeychainSwift
 
 class Keychain_swift_Tests: XCTestCase {
     

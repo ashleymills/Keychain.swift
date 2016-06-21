@@ -1,17 +1,26 @@
+#
+# Be sure to run `pod lib lint Simple-KeychainSwift.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+#
+
 Pod::Spec.new do |s|
+  s.name             = 'Simple-KeychainSwift'
+  s.version          = '1.1.1'
+  s.summary          = 'A simple drop in Swift wrapper class for the Keychain'
+  s.homepage         = 'https://github.com/ashleymills/Keychain.swift'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Ashley Mills' => 'ashleymills@mac.com' }
+  s.source           = { :git => "https://github.com/ashleymills/Keychain.swift.git", :tag => "v"+s.version.to_s }
+  s.social_media_url = "http://twitter.com/ashleymills"
 
-s.name         = "Simple-KeychainSwift"
-s.version      = "1.1.1"
-s.summary      = "A simple drop in Swift wrapper class for the Keychain"
-s.homepage     = "https://github.com/ashleymills/Keychain.swift"
-s.license      = "MIT"
-s.author       = { "Ashley Mills" => "ashleymills@mac.com" }
-s.social_media_url   = "http://twitter.com/ashleymills"
-s.platform     = :ios, "9.3"
-s.platform     = :osx, "10.11"
-s.ios.deployment_target = "8.0"
-s.osx.deployment_target = "10.9"
-s.source       = { :git => "https://github.com/ashleymills/Keychain.swift.git", :tag => "v"+s.version.to_s }
-s.source_files = "Keychain.swift"
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
 
+  s.source_files = 'Simple-KeychainSwift/Classes/**/*.swift'
+  
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
 end

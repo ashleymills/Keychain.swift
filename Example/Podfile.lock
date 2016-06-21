@@ -1,0 +1,16 @@
+PODS:
+  - Simple-KeychainSwift (0.1.0)
+
+DEPENDENCIES:
+  - Simple-KeychainSwift (from `../`)
+
+EXTERNAL SOURCES:
+  Simple-KeychainSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Simple-KeychainSwift: a626e406ce41575d3bc68822ff521f2df4b41507
+
+PODFILE CHECKSUM: 5fc898cab62f2e778e82380141dfaada86edc7f1
+
+COCOAPODS: 1.0.1
