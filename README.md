@@ -9,10 +9,12 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
+### Manual
+Just drop the **Keychain.swift** file into your project. That's it!
+
+### CocoaPods
 Simple-KeychainSwift is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -22,7 +24,7 @@ pod "Simple-KeychainSwift"
 
 ## Author
 
-Ashley Mills, ashleymills@mac.com
+Simple-KeychainSwift was wrtten by Ashley Mills, ashleymills@mac.com
 
 ## License
 
