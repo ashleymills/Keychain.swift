@@ -1,0 +1,22 @@
+{
+  "name": "Simple-KeychainSwift",
+  "version": "0.1.0",
+  "summary": "A short description of Simple-KeychainSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/Simple-KeychainSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ashley Mills": "ashleymills@mac.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/Simple-KeychainSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Simple-KeychainSwift/Classes/**/*"
+}
