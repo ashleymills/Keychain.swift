@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Keychain {
+public class Keychain {
     
     // MARK: - *** Public methods ***
     class func set(value:String, forKey key:String) -> Bool {
