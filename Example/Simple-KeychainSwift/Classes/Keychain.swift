@@ -11,7 +11,7 @@ import Foundation
 class Keychain {
     
     // MARK: - *** Public methods ***
-    class func set(value:String, forKey key:String) -> Bool {
+    class func set(_ value:String, forKey key:String) -> Bool {
         if valueExists(forKey: key) {
             return update(value, forKey: key)
         } else {
@@ -19,7 +19,7 @@ class Keychain {
         }
     }
     
-    class func set(bool:Bool, forKey key:String) -> Bool {
+    class func set(_ bool:Bool, forKey key:String) -> Bool {
         let value = bool ? "true" : "false"
         return set(value, forKey: key)
     }
@@ -27,7 +27,7 @@ class Keychain {
     class func value(forKey key: String) -> String? {
         guard let valueData = valueData(forKey: key) else { return nil }
         
-        return NSString(data: valueData, encoding: NSUTF8StringEncoding) as? String
+        return NSString(data: valueData, encoding: String.Encoding.utf8.rawValue) as? String
     }
     
     class func bool(forKey key: String) -> Bool {
@@ -41,44 +41,44 @@ class Keychain {
     class func reset() -> Bool {
         
         let searchDictionary = basicDictionary()
-        let status = SecItemDelete(searchDictionary)
+        let status = SecItemDelete(searchDictionary as CFDictionary)
         return status == errSecSuccess
     }
     
     // MARK: - *** methods ***
-    private class func valueExists(forKey key: String) -> Bool {
+    fileprivate class func valueExists(forKey key: String) -> Bool {
         return valueData(forKey: key) != nil
     }
     
-    private class func create(value: String, forKey key: String) -> Bool {
+    fileprivate class func create(_ value: String, forKey key: String) -> Bool {
         var dictionary = newSearchDictionary(forKey: key)
         
-        dictionary[kSecValueData as String] = value.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        dictionary[kSecValueData as String] = value.data(using: String.Encoding.utf8, allowLossyConversion: false) as AnyObject?
 
-        let status = SecItemAdd(dictionary, nil)
+        let status = SecItemAdd(dictionary as CFDictionary, nil)
         return status == errSecSuccess
     }
     
-    private class func update(value: String, forKey key: String) -> Bool {
+    fileprivate class func update(_ value: String, forKey key: String) -> Bool {
         
         let searchDictionary = newSearchDictionary(forKey: key)
         var updateDictionary = [String: AnyObject]()
         
-        updateDictionary[kSecValueData as String] = value.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        updateDictionary[kSecValueData as String] = value.data(using: String.Encoding.utf8, allowLossyConversion: false) as AnyObject?
         
-        let status = SecItemUpdate(searchDictionary, updateDictionary)
+        let status = SecItemUpdate(searchDictionary as CFDictionary, updateDictionary as CFDictionary)
         
         return status == errSecSuccess
     }
     
-    private class func deleteValue(forKey key: String) -> Bool {
+    fileprivate class func deleteValue(forKey key: String) -> Bool {
         let searchDictionary = newSearchDictionary(forKey: key)
-        let status = SecItemDelete(searchDictionary)
+        let status = SecItemDelete(searchDictionary as CFDictionary)
         
         return status == errSecSuccess
     }
     
-    private class func valueData(forKey key: String) -> NSData?  {
+    fileprivate class func valueData(forKey key: String) -> Data?  {
         
         var searchDictionary = newSearchDictionary(forKey: key)
         
@@ -86,11 +86,11 @@ class Keychain {
         searchDictionary[kSecReturnData as String] = kCFBooleanTrue
         
         var retrievedData: AnyObject?
-        let status = SecItemCopyMatching(searchDictionary as CFDictionaryRef, &retrievedData)
+        let status = SecItemCopyMatching(searchDictionary as CFDictionary, &retrievedData)
         
-        var data: NSData?
+        var data: Data?
         if status == errSecSuccess {
-            data = retrievedData as? NSData
+            data = retrievedData as? Data
         }
         
         return data
@@ -107,12 +107,12 @@ class Keychain {
         var retrievedAttributes: AnyObject?
         var retrievedData: AnyObject?
         
-        var status = SecItemCopyMatching(searchDictionary as CFDictionaryRef, &retrievedAttributes)
+        var status = SecItemCopyMatching(searchDictionary as CFDictionary, &retrievedAttributes)
         if status != errSecSuccess {
             return nil
         }
 
-        status = SecItemCopyMatching(searchDictionary as CFDictionaryRef, &retrievedData)
+        status = SecItemCopyMatching(searchDictionary as CFDictionary, &retrievedData)
         if status != errSecSuccess {
             return nil
         }
@@ -121,30 +121,30 @@ class Keychain {
 
         var allValues = [[String : String]]()
         for attributeDict in attributeDicts {
-            guard let keyData = attributeDict[kSecAttrAccount as String] as? NSData else { continue }
-            guard let valueData = attributeDict[kSecValueData as String] as? NSData else { continue }
-            guard let key = NSString(data: keyData, encoding: NSUTF8StringEncoding) as? String else { continue }
-            guard let value = NSString(data: valueData, encoding: NSUTF8StringEncoding) as? String else { continue }
+            guard let keyData = attributeDict[kSecAttrAccount as String] as? Data else { continue }
+            guard let valueData = attributeDict[kSecValueData as String] as? Data else { continue }
+            guard let key = NSString(data: keyData, encoding: String.Encoding.utf8.rawValue) as? String else { continue }
+            guard let value = NSString(data: valueData, encoding: String.Encoding.utf8.rawValue) as? String else { continue }
             allValues.append([key: value])
         }
         
         return allValues
     }
     
-    private class func newSearchDictionary(forKey key: String) -> [String: AnyObject] {
-        let encodedIdentifier = key.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+    fileprivate class func newSearchDictionary(forKey key: String) -> [String: AnyObject] {
+        let encodedIdentifier = key.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
         var searchDictionary = basicDictionary()
-        searchDictionary[kSecAttrGeneric as String] = encodedIdentifier
-        searchDictionary[kSecAttrAccount as String] = encodedIdentifier
+        searchDictionary[kSecAttrGeneric as String] = encodedIdentifier as AnyObject?
+        searchDictionary[kSecAttrAccount as String] = encodedIdentifier as AnyObject?
         
         return searchDictionary
     }
     
-    private class func basicDictionary() -> [String: AnyObject] {
+    fileprivate class func basicDictionary() -> [String: AnyObject] {
         
-        let serviceName = NSBundle(forClass: self).infoDictionary![kCFBundleIdentifierKey as String] as! String
+        let serviceName = Bundle(for: self).infoDictionary![kCFBundleIdentifierKey as String] as! String
         
-        return [kSecClass as String : kSecClassGenericPassword, kSecAttrService as String : serviceName]
+        return [kSecClass as String : kSecClassGenericPassword, kSecAttrService as String : serviceName as AnyObject]
     }
 }

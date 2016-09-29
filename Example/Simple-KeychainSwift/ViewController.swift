@@ -10,32 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var addKey: UITextField!
-    @IBOutlet private weak var addValue: UITextField!
+    @IBOutlet fileprivate weak var addKey: UITextField!
+    @IBOutlet fileprivate weak var addValue: UITextField!
 
-    @IBOutlet private weak var fetchKey: UITextField!
-    @IBOutlet private weak var fetchValue: UILabel!
+    @IBOutlet fileprivate weak var fetchKey: UITextField!
+    @IBOutlet fileprivate weak var fetchValue: UILabel!
     
-    @IBOutlet private weak var deleteKey: UITextField!
+    @IBOutlet fileprivate weak var deleteKey: UITextField!
 
 
-    @IBAction private func addToKeychain(sender: AnyObject) {
-        Keychain.set(addValue.text!, forKey: addKey.text!)
+    @IBAction fileprivate func addToKeychain(_ sender: AnyObject) {
+        _ = Keychain.set(addValue.text!, forKey: addKey.text!)
         print("\(Keychain.allValues())")
     }
 
-    @IBAction private func fetchFromKeychain(sender: AnyObject) {
+    @IBAction fileprivate func fetchFromKeychain(_ sender: AnyObject) {
         fetchValue.text = Keychain.value(forKey: fetchKey.text!) ?? "Not found"
         print("\(Keychain.allValues())")
     }
 
-    @IBAction private func deleteFromKeychain(sender: AnyObject) {
-        Keychain.removeValue(forKey: deleteKey.text!)
+    @IBAction fileprivate func deleteFromKeychain(_ sender: AnyObject) {
+        _ = Keychain.removeValue(forKey: deleteKey.text!)
         print("\(Keychain.allValues())")
     }
 
-    @IBAction private func resetKeychain(sender: AnyObject) {
-        Keychain.reset()
+    @IBAction fileprivate func resetKeychain(_ sender: AnyObject) {
+        _ = Keychain.reset()
         print("\(Keychain.allValues())")
     }
 }

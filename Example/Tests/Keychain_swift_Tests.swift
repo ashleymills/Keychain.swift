@@ -14,7 +14,7 @@ class Keychain_swift_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        Keychain.reset()
+        _ = Keychain.reset()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -44,22 +44,22 @@ class Keychain_swift_Tests: XCTestCase {
         var value = Keychain.value(forKey: "key1")
         XCTAssertTrue(value == nil, "Keychain.value should return nil if the key doesn't exist")
         
-        Keychain.set("value1", forKey: "key1")
+        _ = Keychain.set("value1", forKey: "key1")
         value = Keychain.value(forKey: "key1")
         XCTAssertEqual(value!, "value1", "Keychain.value should return the correct value after update")
         
-        Keychain.set("value2", forKey: "key2")
+        _ = Keychain.set("value2", forKey: "key2")
         value = Keychain.value(forKey: "key2")
         XCTAssertEqual(value!, "value2", "Keychain.value should return the correct value after update")
         
-        Keychain.set("value2a", forKey: "key2")
+        _ = Keychain.set("value2a", forKey: "key2")
         value = Keychain.value(forKey: "key2")
         XCTAssertEqual(value!, "value2a", "Keychain.value should return the correct value after update")
     }
     
     func testRemoveValue() {
-        Keychain.set("value1", forKey: "key1")
-        Keychain.set("value2", forKey: "key2")
+        _ = Keychain.set("value1", forKey: "key1")
+        _ = Keychain.set("value2", forKey: "key2")
 
         var success = Keychain.removeValue(forKey: "key1")
         XCTAssertTrue(success, "Keychain.removeValue should return true if the key exists")
@@ -75,8 +75,8 @@ class Keychain_swift_Tests: XCTestCase {
     }
 
     func testReset() {
-        Keychain.set("value1", forKey: "key1")
-        Keychain.set("value2", forKey: "key2")
+        _ = Keychain.set("value1", forKey: "key1")
+        _ = Keychain.set("value2", forKey: "key2")
         
         let success = Keychain.reset()
         XCTAssertTrue(success, "Keychain.reset should return true")
