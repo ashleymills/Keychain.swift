@@ -1,9 +1,8 @@
 {
   "name": "Simple-KeychainSwift",
-  "version": "0.1.0",
-  "summary": "A short description of Simple-KeychainSwift.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/Simple-KeychainSwift",
+  "version": "3",
+  "summary": "A simple drop in Swift wrapper class for the Keychain",
+  "homepage": "https://github.com/ashleymills/Keychain.swift",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +11,13 @@
     "Ashley Mills": "ashleymills@mac.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/Simple-KeychainSwift.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/ashleymills/Keychain.swift.git",
+    "tag": "v3"
   },
+  "social_media_url": "http://twitter.com/ashleymills",
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "osx": "10.9"
   },
-  "source_files": "Simple-KeychainSwift/Classes/**/*"
+  "source_files": "Simple-KeychainSwift/Classes/Keychain.swift"
 }
