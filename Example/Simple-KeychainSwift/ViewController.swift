@@ -21,22 +21,22 @@ class ViewController: UIViewController {
 
     @IBAction fileprivate func addToKeychain(_ sender: AnyObject) {
         _ = Keychain.set(addValue.text!, forKey: addKey.text!)
-        print("\(Keychain.allValues())")
+        print("\(Keychain.allValues() ?? [])")
     }
 
     @IBAction fileprivate func fetchFromKeychain(_ sender: AnyObject) {
         fetchValue.text = Keychain.value(forKey: fetchKey.text!) ?? "Not found"
-        print("\(Keychain.allValues())")
+        print("\(Keychain.allValues() ?? [])")
     }
 
     @IBAction fileprivate func deleteFromKeychain(_ sender: AnyObject) {
         _ = Keychain.removeValue(forKey: deleteKey.text!)
-        print("\(Keychain.allValues())")
+        print("\(Keychain.allValues() ?? [])")
     }
 
     @IBAction fileprivate func resetKeychain(_ sender: AnyObject) {
         _ = Keychain.reset()
-        print("\(Keychain.allValues())")
+        print("\(Keychain.allValues() ?? [])")
     }
 }
 

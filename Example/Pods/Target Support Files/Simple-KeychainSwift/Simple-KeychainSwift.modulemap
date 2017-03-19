@@ -1,6 +1,0 @@
-framework module Simple_KeychainSwift {
-  umbrella header "Simple-KeychainSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -27,7 +27,7 @@ public class Keychain {
     public class func value(forKey key: String) -> String? {
         guard let valueData = valueData(forKey: key) else { return nil }
         
-        return NSString(data: valueData, encoding: String.Encoding.utf8.rawValue) as? String
+        return NSString(data: valueData, encoding: String.Encoding.utf8.rawValue) as String?
     }
     
     public class func bool(forKey key: String) -> Bool {
@@ -72,8 +72,8 @@ public class Keychain {
         for attributeDict in attributeDicts {
             guard let keyData = attributeDict[kSecAttrAccount as String] as? Data else { continue }
             guard let valueData = attributeDict[kSecValueData as String] as? Data else { continue }
-            guard let key = NSString(data: keyData, encoding: String.Encoding.utf8.rawValue) as? String else { continue }
-            guard let value = NSString(data: valueData, encoding: String.Encoding.utf8.rawValue) as? String else { continue }
+            guard let key = NSString(data: keyData, encoding: String.Encoding.utf8.rawValue) as String? else { continue }
+            guard let value = NSString(data: valueData, encoding: String.Encoding.utf8.rawValue) as String? else { continue }
             allValues.append([key: value])
         }
         
