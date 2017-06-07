@@ -11,7 +11,7 @@ import Foundation
 // MARK: - *** Public methods ***
 public class Keychain {
     
-    public class func set(_ value:String, forKey key:String) -> Bool {
+    @discardableResult public class func set(_ value:String, forKey key:String) -> Bool {
         if valueExists(forKey: key) {
             return update(value, forKey: key)
         } else {
@@ -19,7 +19,7 @@ public class Keychain {
         }
     }
     
-    public class func set(_ bool:Bool, forKey key:String) -> Bool {
+    @discardableResult public class func set(_ bool:Bool, forKey key:String) -> Bool {
         let value = bool ? "true" : "false"
         return set(value, forKey: key)
     }
@@ -34,11 +34,11 @@ public class Keychain {
         return value(forKey: key) == "true"
     }
     
-    public class func removeValue(forKey key:String) -> Bool {
+    @discardableResult public class func removeValue(forKey key:String) -> Bool {
         return deleteValue(forKey: key)
     }
     
-    public class func reset() -> Bool {
+    @discardableResult public class func reset() -> Bool {
         
         let searchDictionary = basicDictionary()
         let status = SecItemDelete(searchDictionary as CFDictionary)

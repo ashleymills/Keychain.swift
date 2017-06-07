@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		CA1A8BF21EE886D700D67385 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A8BF11EE886D700D67385 /* Keychain.swift */; };
 		CACEAAED1D194B9000248423 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACEAAE71D194B9000248423 /* Main.storyboard */; };
 		CACEAAEE1D194B9000248423 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACEAAE91D194B9000248423 /* LaunchScreen.xib */; };
 		CACEAAEF1D194B9000248423 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEAAEB1D194B9000248423 /* AppDelegate.swift */; };
 		CACEAAF01D194B9000248423 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEAAEC1D194B9000248423 /* ViewController.swift */; };
-		CACEAAF51D194C0E00248423 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEAAF31D194C0E00248423 /* Keychain.swift */; };
 		CACEAAF81D194C5700248423 /* Keychain_swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEAAF61D194C4300248423 /* Keychain_swift_Tests.swift */; };
 		D83338347933FAB9F8F40E23 /* Pods_Simple_KeychainSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2702A3A7D87789E1A1DAD76E /* Pods_Simple_KeychainSwift_Example.framework */; };
 		E8005A2F9C1E3B4336733930 /* Pods_Simple_KeychainSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D738230B305AE0E0A100C3 /* Pods_Simple_KeychainSwift_Tests.framework */; };
@@ -43,11 +43,11 @@
 		81E4E0ED65E095FE8A03DC8B /* Simple-KeychainSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Simple-KeychainSwift.podspec"; path = "../Simple-KeychainSwift.podspec"; sourceTree = "<group>"; };
 		AC32CF4B67BD3174C24DA238 /* Pods-Simple-KeychainSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple-KeychainSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple-KeychainSwift_Tests/Pods-Simple-KeychainSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B9A1BECAD39E0AFE79A3A265 /* Pods-Simple-KeychainSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple-KeychainSwift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple-KeychainSwift_Example/Pods-Simple-KeychainSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CA1A8BF11EE886D700D67385 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = "../../Simple-KeychainSwift/Classes/Keychain.swift"; sourceTree = "<group>"; };
 		CACEAAE81D194B9000248423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CACEAAEA1D194B9000248423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CACEAAEB1D194B9000248423 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CACEAAEC1D194B9000248423 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CACEAAF31D194C0E00248423 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		CACEAAF61D194C4300248423 /* Keychain_swift_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain_swift_Tests.swift; sourceTree = "<group>"; };
 		CADBEE611D1961A5003CE00F /* Simple_KeychainSwift_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_KeychainSwift_ExampleTests.swift; sourceTree = "<group>"; };
 		CADBEE631D1961A5003CE00F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,8 +122,8 @@
 				CACEAAE91D194B9000248423 /* LaunchScreen.xib */,
 				CACEAAEB1D194B9000248423 /* AppDelegate.swift */,
 				CACEAAEC1D194B9000248423 /* ViewController.swift */,
+				CA1A8BF11EE886D700D67385 /* Keychain.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				CACEAAF11D194C0E00248423 /* Classes */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for Simple-KeychainSwift";
@@ -163,14 +163,6 @@
 				4E91141E307B0FFDBE75AA36 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		CACEAAF11D194C0E00248423 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				CACEAAF31D194C0E00248423 /* Keychain.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		CADBEE601D1961A5003CE00F /* Simple-KeychainSwift_ExampleTests */ = {
@@ -233,16 +225,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -299,7 +291,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3C147553E0886A8CA5E505E2 /* [CP] Copy Pods Resources */ = {
@@ -344,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D9438AC358C04B1BFB5D9A05 /* [CP] Embed Pods Frameworks */ = {
@@ -386,7 +378,7 @@
 			files = (
 				CACEAAF01D194B9000248423 /* ViewController.swift in Sources */,
 				CACEAAEF1D194B9000248423 /* AppDelegate.swift in Sources */,
-				CACEAAF51D194C0E00248423 /* Keychain.swift in Sources */,
+				CA1A8BF21EE886D700D67385 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,14 +428,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -483,14 +481,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -519,7 +523,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08C3A10E0A405968FCAA3EA7 /* Pods-Simple-KeychainSwift_Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Simple-KeychainSwift/Info.plist";
@@ -528,7 +531,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -536,7 +540,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9A1BECAD39E0AFE79A3A265 /* Pods-Simple-KeychainSwift_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Simple-KeychainSwift/Info.plist";
@@ -544,7 +547,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -563,7 +567,8 @@
 				MACH_O_TYPE = mh_bundle;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple-KeychainSwift_Example.app/Simple-KeychainSwift_Example";
 			};
 			name = Debug;
@@ -579,7 +584,8 @@
 				MACH_O_TYPE = mh_bundle;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple-KeychainSwift_Example.app/Simple-KeychainSwift_Example";
 			};
 			name = Release;

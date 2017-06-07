@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
 
     @IBAction fileprivate func addToKeychain(_ sender: AnyObject) {
-        _ = Keychain.set(addValue.text!, forKey: addKey.text!)
+        Keychain.set(addValue.text!, forKey: addKey.text!)
         print("\(Keychain.allValues() ?? [])")
     }
 
@@ -30,12 +30,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction fileprivate func deleteFromKeychain(_ sender: AnyObject) {
-        _ = Keychain.removeValue(forKey: deleteKey.text!)
+        Keychain.removeValue(forKey: deleteKey.text!)
         print("\(Keychain.allValues() ?? [])")
     }
 
     @IBAction fileprivate func resetKeychain(_ sender: AnyObject) {
-        _ = Keychain.reset()
+        Keychain.reset()
         print("\(Keychain.allValues() ?? [])")
     }
 }
