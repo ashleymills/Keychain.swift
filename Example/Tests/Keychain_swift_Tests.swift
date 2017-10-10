@@ -41,7 +41,7 @@ class Keychain_swift_Tests: XCTestCase {
     }
     
     func testValue() {
-        var value = Keychain.value(forKey: "key1")
+        var value = Keychain.value(forKey: "key1") as String?
         XCTAssertTrue(value == nil, "Keychain.value should return nil if the key doesn't exist")
         
         Keychain.set("value1", forKey: "key1")
@@ -67,7 +67,7 @@ class Keychain_swift_Tests: XCTestCase {
         success = Keychain.removeValue(forKey: "key3")
         XCTAssertFalse(success, "Keychain.removeValue should return falue if the key doesn't exist")
         
-        var value = Keychain.value(forKey: "key1")
+        var value = Keychain.value(forKey: "key1") as String?
         XCTAssertTrue(value == nil, "Keychain.value should return nil if the key was removed")
 
         value = Keychain.value(forKey: "key2")
@@ -81,10 +81,25 @@ class Keychain_swift_Tests: XCTestCase {
         let success = Keychain.reset()
         XCTAssertTrue(success, "Keychain.reset should return true")
         
-        var value = Keychain.value(forKey: "key1")
+        var value = Keychain.value(forKey: "key1") as String?
         XCTAssertTrue(value == nil, "Keychain.value should return nil after reset")
         
         value = Keychain.value(forKey: "key2")
         XCTAssertTrue(value == nil, "Keychain.value should return nil after reset")
+    }
+    
+    func testTypes() {
+        
+        Keychain.set("hello", forKey: "string")
+        Keychain.set(99, forKey: "int")
+        Keychain.set(Date.distantPast, forKey: "date")
+        Keychain.set(true, forKey: "bool true")
+        Keychain.set(false, forKey: "bool false")
+
+        XCTAssertEqual(Keychain.value(forKey: "string"), "hello")
+        XCTAssertEqual(Keychain.value(forKey: "int"), 99)
+        XCTAssertEqual(Keychain.value(forKey: "date"), Date.distantPast)
+        XCTAssertEqual(Keychain.value(forKey: "bool true"), true)
+        XCTAssertEqual(Keychain.value(forKey: "bool false"), false)
     }
 }

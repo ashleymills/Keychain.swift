@@ -32,15 +32,30 @@ Simple-KeychainSwift is available under the MIT license. See the LICENSE file fo
 
 ## Example usage
 
+Simple-KeychainSwift defines a protocol `TypeSafeKeychainValue`…
+
+```swift
+public protocol TypeSafeKeychainValue {
+    func data() -> Data?                   // Convert to Data
+    static func value(data: Data) -> Self? // Convert from Data
+}
+```
+
+You can use Simple-KeychainSwift to set any values that conform to this protocol. Currently supported are `String`, `Int`, `Bool` and `Date` - but you can set any other values that conform to this protocol.
+
 ### Set a key/value pair
 
-`Keychain.set("some value", forKey: "my key")`
-`Keychain.set(true/false, forKey: "my key")`
+`Keychain.set("some value", forKey: "some string")`
+`Keychain.set(true, forKey: "some bool")`
+`Keychain.set(Date(), forKey: "some date")`
+`Keychain.set(27, forKey: "some int")`
 
 ### Retrieve the value for a key
 
-`Keychain.value(forKey: "my key")`
-`Keychain.bool(forKey: "my key")`
+`Keychain.value(forKey: "some string") as String `
+`Keychain.value(forKey: "some bool") as Bool `
+`Keychain.value(forKey: "some date") as Date `
+`Keychain.value(forKey: "some int") as Int `
 
 ### Delete a key/value pair
 
