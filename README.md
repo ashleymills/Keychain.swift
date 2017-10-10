@@ -26,7 +26,7 @@ Just drop the **Keychain.swift** file into your project. That's it!
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "**Simple-KeychainSwift**"
+pod "Simple-KeychainSwift"
 ```
 
 ## Author
