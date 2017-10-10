@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Simple-KeychainSwift'
-  s.version          = '4.0'
+  s.version          = '4.0.1'
   s.summary          = 'A simple drop in Swift wrapper class for the Keychain'
   s.homepage         = 'https://github.com/ashleymills/Keychain.swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
