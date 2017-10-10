@@ -1,12 +1,12 @@
-# Simple-KeychainSwift
+# **Simple-KeychainSwift**
 
-[![Version](https://img.shields.io/cocoapods/v/Simple-KeychainSwift.svg?style=flat)](http://cocoapods.org/pods/Simple-KeychainSwift)
-[![License](https://img.shields.io/cocoapods/l/Simple-KeychainSwift.svg?style=flat)](http://cocoapods.org/pods/Simple-KeychainSwift)
-[![Platform](https://img.shields.io/cocoapods/p/Simple-KeychainSwift.svg?style=flat)](http://cocoapods.org/pods/Simple-KeychainSwift)
+[![Version](https://img.shields.io/cocoapods/v/**Simple-KeychainSwift**.svg?style=flat)](http://cocoapods.org/pods/**Simple-KeychainSwift**)
+[![License](https://img.shields.io/cocoapods/l/**Simple-KeychainSwift**.svg?style=flat)](http://cocoapods.org/pods/**Simple-KeychainSwift**)
+[![Platform](https://img.shields.io/cocoapods/p/**Simple-KeychainSwift**.svg?style=flat)](http://cocoapods.org/pods/**Simple-KeychainSwift**)
 
 ## Supporting Reachability.swift
 
-Keeping Simple-KeychainSwift up-to-date is a time consuming task. Making updates, reviewing pull requests, responding to issues and answering emails all take time. If you'd like to help keep me motivated, please download my free app, Photo Flipper from the App Store. (To really motivate me, pay $1.99 for the IAP 😀)
+Keeping **Simple-KeychainSwift** up-to-date is a time consuming task. Making updates, reviewing pull requests, responding to issues and answering emails all take time. If you'd like to help keep me motivated, please download my free app, Photo Flipper from the App Store. (To really motivate me, pay $1.99 for the IAP 😀)
 
 And don't forget to ★ the repo. This increases its visibility and encourages others to contribute.
 
@@ -22,24 +22,24 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 Just drop the **Keychain.swift** file into your project. That's it!
 
 ### CocoaPods
-Simple-KeychainSwift is available through [CocoaPods](http://cocoapods.org). To install
+**Simple-KeychainSwift** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Simple-KeychainSwift"
+pod "**Simple-KeychainSwift**"
 ```
 
 ## Author
 
-Simple-KeychainSwift was wrtten by Ashley Mills, ashleymills@mac.com
+**Simple-KeychainSwift** was wrtten by Ashley Mills, ashleymills@mac.com
 
 ## License
 
-Simple-KeychainSwift is available under the MIT license. See the LICENSE file for more info.
+**Simple-KeychainSwift** is available under the MIT license. See the LICENSE file for more info.
 
 ## Example usage
 
-Simple-KeychainSwift declares a protocol `TypeSafeKeychainValue`:
+**Simple-KeychainSwift** declares a protocol `TypeSafeKeychainValue`:
 
 ```swift
 public protocol TypeSafeKeychainValue {
@@ -48,7 +48,7 @@ public protocol TypeSafeKeychainValue {
 }
 ```
 
-You can use Simple-KeychainSwift to set any types that conform to this protocol. Currently supported are `String`, `Int`, `Bool` and `Date`, To set other types, add conformity to `TypeSafeKeychainValue`, e.g.
+You can use **Simple-KeychainSwift** to set any types that conform to this protocol. Currently supported are `String`, `Int`, `Bool` and `Date`, To set other types, add conformity to `TypeSafeKeychainValue`, e.g.
 
 ```swift
 extension Int: TypeSafeKeychainValue {
@@ -94,7 +94,7 @@ Got a bug fix, or a new feature? Create a pull request and go for it!
 
 ## Let me know!
 
-If you use **Keychain.swift**, please let me know.
+If you use **Simple-KeychainSwift**, please let me know.
 
 Cheers,
 Ash
