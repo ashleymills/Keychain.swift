@@ -57,17 +57,21 @@ extension Int: TypeSafeKeychainValue {
 
 ### Set a key/value pair
 
-`Keychain.set("some value", forKey: "some string")`
-`Keychain.set(true, forKey: "some bool")`
-`Keychain.set(Date(), forKey: "some date")`
-`Keychain.set(27, forKey: "some int")`
+```swift
+Keychain.set("some value", forKey: "some string")
+Keychain.set(true, forKey: "some bool")
+Keychain.set(Date(), forKey: "some date")
+Keychain.set(27, forKey: "some int")
+```
 
 ### Retrieve the value for a key
 
-`Keychain.value(forKey: "some string") as String `
-`Keychain.value(forKey: "some bool") as Bool `
-`Keychain.value(forKey: "some date") as Date `
-`Keychain.value(forKey: "some int") as Int `
+```swift
+Keychain.value(forKey: "some string") as String
+Keychain.value(forKey: "some bool") as Bool
+Keychain.value(forKey: "some date") as Date
+Keychain.value(forKey: "some int") as Int
+```
 
 ### Delete a key/value pair
 
