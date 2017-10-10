@@ -32,7 +32,7 @@ Simple-KeychainSwift is available under the MIT license. See the LICENSE file fo
 
 ## Example usage
 
-Simple-KeychainSwift defines a protocol `TypeSafeKeychainValue`…
+Simple-KeychainSwift declares a protocol `TypeSafeKeychainValue`:
 
 ```swift
 public protocol TypeSafeKeychainValue {
@@ -41,7 +41,19 @@ public protocol TypeSafeKeychainValue {
 }
 ```
 
-You can use Simple-KeychainSwift to set any values that conform to this protocol. Currently supported are `String`, `Int`, `Bool` and `Date` - but you can set any other values that conform to this protocol.
+You can use Simple-KeychainSwift to set any types that conform to this protocol. Currently supported are `String`, `Int`, `Bool` and `Date`, To set other types, add conformity to `TypeSafeKeychainValue`, e.g.
+
+```swift
+extension Int: TypeSafeKeychainValue {
+    public func data() -> Data? {
+        var value = self
+        return Data(bytes: &value, count: MemoryLayout.size(ofValue: value))
+    }
+    public static func value(data: Data) -> Int? {
+        return data.withUnsafeBytes { $0.pointee }
+    }
+}
+```
 
 ### Set a key/value pair
 
