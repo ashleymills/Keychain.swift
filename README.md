@@ -1,9 +1,16 @@
 # Simple-KeychainSwift
 
-[![CI Status](http://img.shields.io/travis/Ashley Mills/Simple-KeychainSwift.svg?style=flat)](https://travis-ci.org/Ashley Mills/Simple-KeychainSwift)
 [![Version](https://img.shields.io/cocoapods/v/Simple-KeychainSwift.svg?style=flat)](http://cocoapods.org/pods/Simple-KeychainSwift)
 [![License](https://img.shields.io/cocoapods/l/Simple-KeychainSwift.svg?style=flat)](http://cocoapods.org/pods/Simple-KeychainSwift)
 [![Platform](https://img.shields.io/cocoapods/p/Simple-KeychainSwift.svg?style=flat)](http://cocoapods.org/pods/Simple-KeychainSwift)
+
+## Supporting Reachability.swift
+
+Keeping Simple-KeychainSwift up-to-date is a time consuming task. Making updates, reviewing pull requests, responding to issues and answering emails all take time. If you'd like to help keep me motivated, please download my free app, Photo Flipper from the App Store. (To really motivate me, pay $1.99 for the IAP 😀)
+
+And don't forget to ★ the repo. This increases its visibility and encourages others to contribute.
+
+Thanks Ash
 
 ## Example
 
