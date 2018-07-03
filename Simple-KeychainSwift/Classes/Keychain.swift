@@ -11,8 +11,7 @@ import Foundation
 // MARK: - *** Public methods ***
 public class Keychain {
     
-    static var allowBackgroundAccess = false
-
+    public static var allowBackgroundAccess = false
     
     @discardableResult public class func set<T: TypeSafeKeychainValue>(_ value: T?, forKey key: String) -> Bool {
         guard let value = value else {
