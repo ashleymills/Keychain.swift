@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Ashley Mills' => 'ashleymills@mac.com' }
   s.source           = { :git => "https://github.com/ashleymills/Keychain.swift.git", :tag => "v"+s.version.to_s }
   s.social_media_url = "http://twitter.com/ashleymills"
+  s.swift_versions   = ['4.0','4.2','5']
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
