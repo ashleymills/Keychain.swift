@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.social_media_url = "http://twitter.com/ashleymills"
 
   s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.9'
+  s.osx.deployment_target = '10.11'
 
   s.source_files = 'Simple-KeychainSwift/Classes/Keychain.swift'
 end
