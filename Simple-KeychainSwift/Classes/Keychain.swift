@@ -171,7 +171,7 @@ extension Int: TypeSafeKeychainValue {
         return Data(bytes: &value, count: MemoryLayout.size(ofValue: value))
     }
     public static func value(data: Data) -> Int? {
-        return data.withUnsafeBytes { $0.pointee }
+        return data.withUnsafeBytes { $0.load(as: Int.self) }
     }
 }
 
@@ -181,7 +181,7 @@ extension Bool: TypeSafeKeychainValue {
         return Data(bytes: &value, count: MemoryLayout.size(ofValue: value))
     }
     public static func value(data: Data) -> Bool? {
-        return data.withUnsafeBytes { $0.pointee }
+        return data.withUnsafeBytes { $0.load(as: Bool.self) }
     }
 }
 
