@@ -21,6 +21,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ### Manual
 Just drop the **Keychain.swift** file into your project. That's it!
 
+### Swift Package Manager
+**Simple-KeychainSwift** is available through [Swift Package Manager](https://swift.org/package-manager/). **Xcode 11.0+ is required.** 
+To install, open `Xcode -> File -> Swift Packages -> Add Package Dependency` and paste repo's address
+```
+https://github.com/ashleymills/Keychain.swift
+```
+
 ### CocoaPods
 **Simple-KeychainSwift** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
