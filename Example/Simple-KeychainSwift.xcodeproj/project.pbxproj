@@ -44,7 +44,6 @@
 		AC32CF4B67BD3174C24DA238 /* Pods-Simple-KeychainSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple-KeychainSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple-KeychainSwift_Tests/Pods-Simple-KeychainSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B9A1BECAD39E0AFE79A3A265 /* Pods-Simple-KeychainSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple-KeychainSwift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple-KeychainSwift_Example/Pods-Simple-KeychainSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CA1A8BF11EE886D700D67385 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = "../../Simple-KeychainSwift/Classes/Keychain.swift"; sourceTree = "<group>"; };
-		CA6FFACA24CAE7FA004876F3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		CACEAAE81D194B9000248423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CACEAAEA1D194B9000248423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CACEAAEB1D194B9000248423 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +97,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				CA6FFACA24CAE7FA004876F3 /* Package.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Simple-KeychainSwift */,
 				607FACE81AFB9204008FA782 /* Tests */,
