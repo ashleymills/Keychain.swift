@@ -187,9 +187,17 @@ extension Bool: TypeSafeKeychainValue {
 
 extension Date: TypeSafeKeychainValue {
     public func data() -> Data? {
-        return NSKeyedArchiver.archivedData(withRootObject: (self as NSDate))
+        if #available(iOS 11.0, *) {
+            return try? NSKeyedArchiver.archivedData(withRootObject: (self as NSDate), requiringSecureCoding: false)
+        } else {
+            return NSKeyedArchiver.archivedData(withRootObject: (self as NSDate))
+        }
     }
     public static func value(data: Data) -> Date? {
-        return NSKeyedUnarchiver.unarchiveObject(with: data) as? Date
+        if #available(iOS 11.0, *) {
+            return try? NSKeyedUnarchiver.unarchivedObject(ofClass: NSDate.self, from: data) as Date?
+        } else {
+            return NSKeyedUnarchiver.unarchiveObject(with: data) as? Date
+        }
     }
 }

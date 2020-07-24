@@ -6,8 +6,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+- Remove warnings for iOS 14
 
-## [4.1.0] - 2019-06-15
+## [4.2.0] - 2019-06-15
 ### Changed
 - Update for Swift 5
 - Change macOS deployment target to 10.11
