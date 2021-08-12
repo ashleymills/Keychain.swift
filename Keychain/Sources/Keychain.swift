@@ -201,3 +201,23 @@ extension Date: TypeSafeKeychainValue {
         }
     }
 }
+
+extension Data: TypeSafeKeychainValue {
+    public func data() -> Data? {
+        return self
+    }
+    
+    public static func value(data: Data) -> Self? {
+        return data
+    }
+}
+
+extension TypeSafeKeychainValue where Self: Codable {
+    public func data() -> Data? {
+        return try? JSONEncoder().encode(self)
+    }
+    
+    public static func value(data: Data) -> Self? {
+        return try? JSONDecoder().decode(Self.self, from: data)
+    }
+}
