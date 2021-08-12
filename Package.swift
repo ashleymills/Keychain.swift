@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "Simple-KeychainSwift",
+    name: "Keychain",
     platforms: [
         .iOS(.v9)
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "Simple-KeychainSwift", type: .dynamic, targets: ["Simple-KeychainSwift"]),
+            name: "Keychain", type: .dynamic, targets: ["Keychain"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "Simple-KeychainSwift",
+            name: "Keychain",
             dependencies: [],
-            path: "Simple-KeychainSwift/Classes")
+            path: "Keychain/Sources")
     ]
 )
