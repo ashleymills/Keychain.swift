@@ -32,7 +32,7 @@ public class Keychain {
     }
     
     @discardableResult public class func removeValue(forKey key:String) -> Bool {
-        return deleteValue(forKey: key)
+        deleteValue(forKey: key)
     }
     
     @discardableResult public class func reset() -> Bool {
@@ -158,10 +158,10 @@ public protocol TypeSafeKeychainValue {
 
 extension String: TypeSafeKeychainValue {
     public func data() -> Data? {
-        return data(using: .utf8, allowLossyConversion: false)
+        data(using: .utf8, allowLossyConversion: false)
     }
     public static func value(data: Data) -> String? {
-        return String(data: data, encoding: .utf8)
+        String(data: data, encoding: .utf8)
     }
 }
 
@@ -171,7 +171,7 @@ extension Int: TypeSafeKeychainValue {
         return Data(bytes: &value, count: MemoryLayout.size(ofValue: value))
     }
     public static func value(data: Data) -> Int? {
-        return data.withUnsafeBytes { $0.load(as: Int.self) }
+        data.withUnsafeBytes { $0.load(as: Int.self) }
     }
 }
 
@@ -181,23 +181,15 @@ extension Bool: TypeSafeKeychainValue {
         return Data(bytes: &value, count: MemoryLayout.size(ofValue: value))
     }
     public static func value(data: Data) -> Bool? {
-        return data.withUnsafeBytes { $0.load(as: Bool.self) }
+        data.withUnsafeBytes { $0.load(as: Bool.self) }
     }
 }
 
 extension Date: TypeSafeKeychainValue {
     public func data() -> Data? {
-        if #available(iOS 11.0, *) {
-            return try? NSKeyedArchiver.archivedData(withRootObject: (self as NSDate), requiringSecureCoding: false)
-        } else {
-            return NSKeyedArchiver.archivedData(withRootObject: (self as NSDate))
-        }
+        try? NSKeyedArchiver.archivedData(withRootObject: (self as NSDate), requiringSecureCoding: false)
     }
     public static func value(data: Data) -> Date? {
-        if #available(iOS 11.0, *) {
-            return try? NSKeyedUnarchiver.unarchivedObject(ofClass: NSDate.self, from: data) as Date?
-        } else {
-            return NSKeyedUnarchiver.unarchiveObject(with: data) as? Date
-        }
+        try? NSKeyedUnarchiver.unarchivedObject(ofClass: NSDate.self, from: data) as Date?
     }
 }
