@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Simple-KeychainSwift'
-  s.version          = '4.3.0'
+  s.version          = '4.3.1'
   s.summary          = 'A simple drop in Swift wrapper class for the Keychain'
   s.homepage         = 'https://github.com/ashleymills/Keychain.swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/ashleymills/Keychain.swift.git", :tag => "v" + s.version.to_s }
   s.swift_version    = '5.0'
 
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.11'
+  s.ios.deployment_target = '11.0'
+  s.osx.deployment_target = '10.13'
 
   s.source_files = 'Simple-KeychainSwift/Classes/Keychain.swift'
 end
